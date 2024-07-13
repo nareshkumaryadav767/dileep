@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: auto;
+        }
+        label {
+            margin: 5px 0;
+        }
+        input, textarea, select {
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+        .submit-button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: darkorange;
+        }
+        .side-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="side-label">Send us an Email</div>
+        <form action="#" method="post">
+            <label for="name">NAME*</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">EMAIL*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">PHONE</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="subject">SUBJECT*</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">MESSAGE*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label for="services">SERVICES</label>
+            <select id="services" name="services">
+                <option value="">--Select One--</option>
+                <!-- Add options here -->
+            </select>
+
+            <button type="submit" class="submit-button">SUBMIT COMMENT</button>
+        </form>
+    </div>
+</body>
+</html>
